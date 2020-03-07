@@ -46,6 +46,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.android.gms.common.api.Status;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -181,21 +182,21 @@ public class CustomerMapsActivity extends FragmentActivity implements OnMapReady
             }
         });
 
-//        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
-//                getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
-//
-//        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
-//            @Override
-//            public void onPlaceSelected(Place place) {
-//                // TODO: Get info about the selected place.
-//                destination = place.getName().toString();
-//                destinationLatLng = place.getLatLng();
-//            }
-//            @Override
-//            public void onError(Status status) {
-//                // TODO: Handle the error.
-//            }
-//        });
+        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
+                getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
+
+        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+            @Override
+            public void onPlaceSelected(Place place) {
+                // TODO: Get info about the selected place.
+                destination = place.getName().toString();
+                destinationLatLng = place.getLatLng();
+            }
+            @Override
+            public void onError(Status status) {
+                // TODO: Handle the error.
+            }
+        });
 
 
     }
