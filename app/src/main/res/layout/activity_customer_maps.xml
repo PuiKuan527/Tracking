@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CustomerMapsActivity" >
+    tools:context="com.test.tracking.CustomerMapsActivity" >
 
 
     <fragment
@@ -73,7 +73,7 @@
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:id="@+id/driverProfileImage"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/profile"
                 android:padding="20sp"/>
             <LinearLayout
                 android:layout_width="wrap_content"
